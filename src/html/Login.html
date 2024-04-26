@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet_Forum</title>
+    <link rel="stylesheet" href="../static/Register.css">
+</head>
+    <body>
+        <div class="Header width-full" role="banner">
+            <div class="container-Header width-full text-center">
+                <a role="logo" class="header-logo" href="/Login.html">
+                    <img src="../img/Logo.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+        <div class="main">
+            <main>
+                <div class="authentification-form px-3 visual" id="login">
+                    <div class="authentification-form-header p-0">
+                        <h1>Log into <b>GameForum</b></h1>
+                    </div>
+                    <div class="authentification-form-body">
+                        <form  action="/Session" method="GET">
+                            <label for="User"><b>Username</b></label>
+                            <input type="text" name="User" id="UserInput" required minlength="4" maxlength="14" size="35">
+                            <div class="position-relative">
+                                <label for="UserPassword"><b>Password</b></label>
+                                <input type="password" name="UserPassword" id="UserPasswordInput" required minlength="5" size="35">
+                                <input type="submit" name="submit" value="Login" class="ButtonLogin">
+                                <a href="/password_forget" id="forget-password">Forgot password?</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="background">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+    </body>
+</html>
