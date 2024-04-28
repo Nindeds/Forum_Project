@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 .authentification-form-body{    
     font-size: 17px;
     background-color: var(--bgColor-muted, var(--color-canvas-subtle));
-    border: 1px solid var(--borderColor-muted, var(--   color-border-muted));
+    border: 1px solid var(--borderColor-muted, var(--color-border-muted));
     border-top: 0;
     border-radius: 0 0 6px 6px;
 }
@@ -119,7 +119,37 @@ input{
     font-size: 15px;
     position: absolute !important;
     right: 0 !important;
-    
+    bottom: 0 !important;  
+}
+
+#Login-Register{
+    font-size: 15px;
+    position: absolute !important;
+    right: 0 !important;
+    bottom: -30px !important; 
+}
+
+.InputField + span {
+    position: absolute;
+}
+.InputField + span::before {
+    position: absolute;
+    right: -20px;
+    bottom: -27px;
+}
+.InputField:invalid {
+    border: 2px solid red;
+}
+
+ 
+.InputField:invalid + span::before {
+    content: "✖";
+    color:red;
+}
+
+.InputField:valid + span::before {
+    content: "✓";
+    color: green;
 }
 
 @keyframes move {

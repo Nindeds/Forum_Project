@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet_Forum</title>
+    <title>RegisterPage</title>
     <link rel="stylesheet" href="../static/Register.css">
 </head>
     <body>
         <div class="Header width-full" role="banner">
             <div class="container-Header width-full text-center">
-                <a role="logo" class="header-logo" href="/Login.html">
+                <a role="logo" class="header-logo" href="../html/Main.html">
                     <img src="../img/Logo.png" alt="Logo">
                 </a>
             </div>
@@ -18,18 +18,31 @@
             <main>
                 <div class="authentification-form px-3 visual" id="login">
                     <div class="authentification-form-header p-0">
-                        <h1>Sign in to <b>GameForum</b></h1>
+                        <h1>Sign in to <b><br>Game-Forum</b></h1>
                     </div>
                     <div class="authentification-form-body">
-                        <form  action="/Session" method="GET">
-                            <label for="User"><b>Username</b></label>
-                            <input type="text" name="User" id="UserInput" required minlength="4" maxlength="14" size="35">
+                        <form  action="/src/html/Login.html" method="GET">
+                            <label for="UserFirstName"><b>First Name</b></label>
+                            <input type="text" name="UserFirstName" id="UserFirstNameInput" class="InputField" required size="30">
+                            <span></span>
+                            <label for="UserName"><b>Name</b></label>
+                            <input type="text" name="UserName" id="UserNameInput" class="InputField" required size="30">
+                            <span></span>
+                            <label for="UserMail"><b>Email</b></label>
+                            <input type="email" name="UserMail" id="UserMailInput" class="InputField" required size="30">
+                            <span></span>
+                            <label for="User"><b>Username </b></label>
+                            <input type="text" name="User" id="UserInput" class="InputField" required minlength="4" maxlength="14" size="30">
+                            <span></span>
                             <div class="position-relative">
                                 <label for="UserPassword"><b>Password</b></label>
-                                <input type="password" name="UserPassword" id="UserPasswordInput" required minlength="5" size="35">
+                                <input type="password" name="UserPassword" id="UserPasswordInput" class="InputField" required minlength="5" size="30">
+                                <span></span>
+                                <label for="Confirm-Password"><b>Confirm Password</b></label>
+                                <input type="password" name="Confirm-Password" id="Confirm-PasswordInput" class="InputField" required minlength="5" size="30">
+                                <span></span><br>
                                 <input type="submit" name="submit" value="Sign in" class="ButtonLogin">
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -55,4 +68,5 @@
             <span></span>
          </div>
     </body>
+    <script src="../js/function.js"></script>
 </html>
