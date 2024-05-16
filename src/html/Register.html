@@ -21,27 +21,23 @@
                         <h1>Sign in to <b><br>Game-Forum</b></h1>
                     </div>
                     <div class="authentification-form-body">
-                        <form  action="/src/html/Login.html" method="GET">
-                            <label for="UserFirstName"><b>First Name</b></label>
-                            <input type="text" name="UserFirstName" id="UserFirstNameInput" class="InputField" required size="30">
-                            <span></span>
-                            <label for="UserName"><b>Name</b></label>
-                            <input type="text" name="UserName" id="UserNameInput" class="InputField" required size="30">
-                            <span></span>
+                        <form  action="Login.html" id="myForm" method="GET">
                             <label for="UserMail"><b>Email</b></label>
-                            <input type="email" name="UserMail" id="UserMailInput" class="InputField" required size="30">
+                            <input type="email" name="UserMail" id="UserMailInput" class="InputField" size="35" required>
                             <span></span>
                             <label for="User"><b>Username </b></label>
-                            <input type="text" name="User" id="UserInput" class="InputField" required minlength="4" maxlength="14" size="30">
+                            <input type="text" name="User" id="UserInput" class="InputField"  minlength="4" maxlength="14" size="35" required>
                             <span></span>
                             <div class="position-relative">
                                 <label for="UserPassword"><b>Password</b></label>
-                                <input type="password" name="UserPassword" id="UserPasswordInput" class="InputField" required minlength="5" size="30">
+                                <input type="password" name="UserPassword" id="UserPasswordInput" class="InputField"  minlength="5" size="35" required>
                                 <span></span>
                                 <label for="Confirm-Password"><b>Confirm Password</b></label>
-                                <input type="password" name="Confirm-Password" id="Confirm-PasswordInput" class="InputField" required minlength="5" size="30">
+                                <input type="password" name="Confirm-Password" id="Confirm-PasswordInput" class="InputField"  minlength="5" size="35" required>
                                 <span></span><br>
                                 <input type="submit" name="submit" value="Sign in" class="ButtonLogin">
+                                <p id ="placement">Already have an account? </p>
+                                <a href="Login.html" id="Login-Register">Sign in !</a>
                             </div>
                         </form>
                     </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet_Forum-Login-Page</title>
-    <link rel="stylesheet" href="../static/Register.css">
+    <link rel="stylesheet" href="../static/Login.css">
 </head>
     <body>
         <div class="Header width-full" role="banner">
@@ -23,13 +23,13 @@
                     <div class="authentification-form-body">
                         <form  action="Main.html" method="GET">
                             <label for="User"><b>Username or Adress email</b></label>
-                            <input type="text" name="User" id="UserInput" required minlength="4" maxlength="14" size="30">
+                            <input type="text" name="User" id="UserInput" required minlength="4" maxlength="14" size="35">
                             <div class="position-relative">
                                 <label for="UserPassword"><b>Password</b></label>
-                                <input type="password" name="UserPassword" id="UserPasswordInput" required minlength="5" size="30">
+                                <input type="password" name="UserPassword" id="UserPasswordInput" required minlength="5" size="35">
                                 <input type="submit" name="submit" value="Login" class="ButtonLogin">
                                 <a href="/password_forget" id="forget-password">Forgot password?</a>
-                                <a href="/src/html/Register.html" id="Login-Register">Create new account</a>
+                                <a href="Register.html" id="Login-Register">Create new account</a>
                             </div>
 
                         </form>
