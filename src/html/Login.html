@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet_Forum-Login-Page</title>
-    <link rel="stylesheet" href="../static/Login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
     <body>
         <div class="Header width-full" role="banner">
             <div class="container-Header width-full text-center">
-                <a role="logo" class="header-logo" href="/Login.html">
+                <a role="logo" class="header-logo" href="/login">
                     <img src="../img/Logo.png" alt="Logo">
                 </a>
             </div>
@@ -21,15 +21,15 @@
                         <h1>Log into <b><br>Game-Forum</b></h1>
                     </div>
                     <div class="authentification-form-body">
-                        <form  action="Main.html" method="GET">
-                            <label for="User"><b>Username or Adress email</b></label>
+                        <form action="Main.html" method="POST">
+                            <label for="User"><b>Username or Address email</b></label>
                             <input type="text" name="User" id="UserInput" required minlength="4" maxlength="14" size="35">
                             <div class="position-relative">
                                 <label for="UserPassword"><b>Password</b></label>
                                 <input type="password" name="UserPassword" id="UserPasswordInput" required minlength="5" size="35">
                                 <input type="submit" name="submit" value="Login" class="ButtonLogin">
                                 <a href="/password_forget" id="forget-password">Forgot password?</a>
-                                <a href="Register.html" id="Login-Register">Create new account</a>
+                                <a href="/register" id="Login-Register">Create new account</a>
                             </div>
 
                         </form>
