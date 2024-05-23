@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RegisterPage</title>
-    <link rel="stylesheet" href="../static/Register.css">
+    <link rel="stylesheet" href="../css/Register.css">
 </head>
     <body>
         <div class="Header width-full" role="banner">
             <div class="container-Header width-full text-center">
-                <a role="logo" class="header-logo" href="../html/Main.html">
+                <a role="logo" class="header-logo" href="/">
                     <img src="../img/Logo.png" alt="Logo">
                 </a>
             </div>
@@ -21,7 +21,7 @@
                         <h1>Sign in to <b><br>Game-Forum</b></h1>
                     </div>
                     <div class="authentification-form-body">
-                        <form  action="Login.html" id="myForm" method="GET">
+                        <form  action="/login" id="myForm" method="GET">
                             <label for="UserMail"><b>Email</b></label>
                             <input type="email" name="UserMail" id="UserMailInput" class="InputField" size="35" required>
                             <span></span>
@@ -37,7 +37,7 @@
                                 <span></span><br>
                                 <input type="submit" name="submit" value="Sign in" class="ButtonLogin">
                                 <p id ="placement">Already have an account? </p>
-                                <a href="Login.html" id="Login-Register">Sign in !</a>
+                                <a href="/login" id="Login-Register">Sign in !</a>
                             </div>
                         </form>
                     </div>
