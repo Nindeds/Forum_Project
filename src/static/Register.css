@@ -1,167 +1,174 @@
-    body{
-        background-color: rgb(21, 58, 87);
-        line-height: 1.5;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 17px;
-    }
+body {
+    background-color: rgb(21, 58, 87);
+    line-height: 1.5;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+}
 
-    img {
-        width: 7.8125rem;
-        height: auto;
-    }
-    .Header{
-        padding-top: 0.625rem !important;
-        padding-bottom: 0.625rem !important;
-        background-color: transparent;
-    }
+img {
+    width: 7.8125rem;
+    height: auto;
+}
 
-    .main{
-        padding: 2rem;
-    }
+.Header {
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+    background-color: transparent;
+}
 
-    .width-full{
-        width: 100% !important;
-    }
-    .text-center{
-        text-align: center;
-    }
-    .container-Header{
-        background-color: transparent;
-        width: 61.25rem;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0.3125rem;
-    }
+.main {
+    padding: 2rem;
+}
 
-    .authentification-form{
-        margin: 0 auto;
-        width: 19.5rem;
-        height: 28rem;
-    }
+.width-full {
+    width: 100% !important;
+}
 
-    .visual{
-        background-color: rgb(255, 255, 255);
-        border-radius: 0.625rem;
-        box-shadow: 0.25rem 0.25rem 0px rgb(0, 0, 0);
-        padding: 0.9375em;; ;
-    }
-    .px-3{
-        padding-right: 0.8rem !important;
-        padding-left: 0.8rem !important;
-    }
+.text-center {
+    text-align: center;
+}
 
-    .authentification-form-header{
-        margin-bottom: 1rem;
-        text-align: center;
-        text-shadow: none;
-        background-color: transparent;
-        border: 0;
-    }
+.container-Header {
+    background-color: transparent;
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.3125rem;
+}
 
-    .authentification-form-header h1 {
-        font-size: 1.875rem;
-        font-weight: 300;
-        letter-spacing: -0.5px;
-    }
+.authentification-form {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 350px;
+    height: 450px;
+}
 
-    h1, h2, h3, h4, h5, h6 {
-        margin-top: 1rem;
-        margin-bottom: 0;
-        color: black;
-    }
-    .position-relative{
-        position: relative !important;
-    }
+.visual {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0px rgb(0, 0, 0);
+    padding: 0.9375rem;
+}
 
-    .authentification-form-body{    
-        font-size: 1.065rem    ;
-        background-color: var(--bgColor-muted, var(--color-canvas-subtle));
-        border: 1rem solid var(--borderColor-muted, var(--color-border-muted));
-        border-top: 0;
-        border-radius: 0 0 0.375rem 0.375rem;
-    }
-    input{
-        border-radius: 0.350rem;
-    }
+.px-3 {
+    padding-right: 0.8rem !important;
+    padding-left: 0.8rem !important;
+}
 
-    .authentification-form label{
-        display: block;
-        margin-bottom: 1%;
-        font-weight: 400;
-        text-align: left;
-    }
+.authentification-form-header {
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
 
-    * {
-        margin: 0;
-        box-sizing: border-box;
-    }
+.authentification-form-header h1 {
+    font-size: 1.875rem;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+}
 
-    .ButtonLogin{
-        position: relative;
-        bottom: -1rem !important;
-        right: 0rem !important;
-        padding: 0.3rem 1.5rem 0.3rem 1.5rem ;
-        text-align: center;
-        margin: auto;
-        display: flex;
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: black;
+}
 
-    }
-    .ButtonLogin:hover{
-        background-color: rgb(186, 177, 177);
-        cursor: pointer;
-    }
+.position-relative {
+    position: relative !important;
+}
 
-    .main {
-        position: relative; 
-        z-index: 1; 
-    }
+.authentification-form-body {
+    font-size: 1.065rem;
+    background-color: var(--bgColor-muted, var(--color-canvas-subtle));
+    border: 1rem solid var(--borderColor-muted, var(--color-border-muted));
+    border-top: 0;
+    border-radius: 0 0 0.375rem 0.375rem;
+}
 
-    p{
-        position: absolute;
-        bottom: -3rem;
-        right: 8.5rem;
-        font-size: 0.8rem;
-    }
+input {
+    border-radius: 0.350rem;
+}
 
-    #UserPasswordInput:hover{
-        background-color: rgb(190, 186, 186);
-    }
+.authentification-form label {
+    display: block;
+    margin-bottom: 1%;
+    font-weight: 400;
+    text-align: left;
+}
 
-    #UserInput:hover{
-        background-color: rgb(190, 186, 186);
-    }
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
 
+.ButtonLogin {
+    position: relative;
+    bottom: -1rem !important;
+    right: 0rem !important;
+    padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
 
-    #Login-Register{
-        font-size: 0.9375rem;
-        position: absolute ;
-        right: 5.3rem ;
-        bottom: -3rem ; 
-        font-size: 0.8rem;
-    }
+.ButtonLogin:hover {
+    background-color: rgb(186, 177, 177);
+    cursor: pointer;
+}
 
-    .InputField + span {
-        position: absolute;
-    }
-    .InputField + span::before {
-        position: absolute;
-        right: -1.25rem ;
-        bottom: -1.6875rem;
-    }
-    .InputField:invalid {
-        border: 0.125rem solid red;
-    }
+.main {
+    position: relative;
+    z-index: 1;
+}
 
-    
-    .InputField:invalid + span::before {
-        content: "✖";
-        color:red;
-    }
+p {
+    position: absolute;
+    bottom: -3rem;
+    right: 8.5rem;
+    font-size: 0.8rem;
+}
 
-    .InputField:valid + span::before {
-        content: "✓";
-        color: green;
-    }
+#UserPasswordInput:hover {
+    background-color: rgb(190, 186, 186);
+}
+
+#UserInput:hover {
+    background-color: rgb(190, 186, 186);
+}
+
+#Login-Register {
+    font-size: 0.9375rem;
+    position: absolute;
+    right: 5.3rem;
+    bottom: -3rem;
+    font-size: 0.8rem;
+}
+
+.InputField + span {
+    position: absolute;
+}
+
+.InputField + span::before {
+    position: absolute;
+    right: -1.25rem;
+    bottom: -1.6875rem;
+}
+
+.InputField:invalid {
+    border: 0.125rem solid red;
+}
+
+.InputField:invalid + span::before {
+    content: "✖";
+    color: red;
+}
+
+.InputField:valid + span::before {
+    content: "✓";
+    color: green;
+}
 
     @keyframes move {
         100% {
