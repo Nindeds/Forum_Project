@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum - Page d'Accueil</title>
-    <link rel="stylesheet" href="../css/Main.css">
+    <title>Forum - Page League of Legend</title>
+    <link rel="stylesheet" href="../css/LeagueOfLegend.css">
 </head>
 <body>
     <header class="fixed-top">
@@ -13,7 +13,7 @@
                 <a href="Main.html" class="img"><img src="../img/Logo.png" alt="Logo"></a>
                 <span class="space"></span>
                 <ul class="main-menu">
-                    <li><a href="Main.html" class="nav">Home</a>
+                    <li><a href="Main.html" class="nav">Accueil</a>
                     </li>
                     <li><a href="" class="nav">Forum ▼</a>
                         <ul class="sub-menu">
@@ -23,53 +23,53 @@
                             <li><a href="">World of Warcraft</a></li>
                         </ul>
                     </li>
-                    <li><a href="" class="nav">News ▼</a>
+                    <li><a href="" class="nav">Jeu Actu ▼</a>
                         <ul class="sub-menu">
                             <li><a href="#">Sous-menu 1</a></li>
                             <li><a href="#">Sous-menu 2</a></li>
                             <li><a href="#">Sous-menu 3</a></li>
                         </ul>
                     </li>
-                    <li><a href="" class="nav">Member ▼</a>
+                    <li><a href="" class="nav">Membre ▼</a>
                         <ul class="sub-menu">
                         </ul>
                     </li>
+                        </ul>
+                    </li>
                 </ul>
-                <span class="space2"></span>
-                <form action="Login.html">
-                    <input  id="Button-Log-Main" type="submit" value="Sign in" />
-                </form>
-                <div>
-                </div>
             </div>
         </div>
     </header>
-    <div class="secondary-main">
-            <center><h2>▼ News ▼</h2></center>
-            <form action="">
-                <a href="LeagueOfLegend.html"><img  id="post-league"  href="LeagueOfLegend.html" src="../img/League.jpg" alt="Post League"></a>
-            </form>
-            
-    </div>
     <div class="main">
         <main>
-            <H2>Welcome on the Game-Forum</H2>
-            <form action="" method="get">
-                <div class="search-container">
-                    <input type="text" id="search-bar"  name="" placeholder="Research...">
-                    <button onclick="search()"  id="Search-Button">Research</button>
-                </div>
-                <div id="results"></div>
-            </form>
-            <h2>Tendance</h2>
-            <ul class="Hot-topic">
-                <li><a href="#">League of Legend</a></li>
-                <li><a href="#">Overwatch 2</a></li>
-                <li><a href="#">Valorant</a></li>
-                <li><a href="#">Dota 2</a></li>
-                <li><a href=" ">World of Warcraft</a></li>
-            </ul>
-            <h2>HOT TOPIC</h2>
+            <section class="welcome-section">
+                <h1>Bienvenue sur notre Forum League of Legend</h1>
+                <p>Rejoignez notre communauté pour discuter des sujets qui vous passionnent.</p>
+            </section>
+            <section class="latest-discussions">
+                <h2>Dernières Discussions</h2>
+                <ul>
+                    <li><a href="#">Discussion 1</a></li>
+                    <li><a href="#">Discussion 2</a></li>
+                    <li><a href="#">Discussion 3</a></li>
+                </ul>
+            </section>
+            <section class="forum-categories">
+                <h2>Catégories du Forum</h2>
+                <ul>
+                    <li><a href="#">Catégorie 1</a></li>
+                    <li><a href="#">Catégorie 2</a></li>
+                    <li><a href="#">Catégorie 3</a></li>
+                </ul>
+            </section>
+            <section class="create-discussion">
+                <h2>Créer une Discussion</h2>
+                <form action="#" method="POST">
+                    <input type="text" name="title" placeholder="Titre de la discussion" required>
+                    <textarea name="content" placeholder="Contenu de la discussion" required></textarea>
+                    <button type="submit">Créer</button>
+                </form>
+            </section>
         </main>
     </div>
     <div class="background">
@@ -92,5 +92,4 @@
         <span></span>
      </div>
 </body>
-<script src="../js/function.js"></script>
 </html>

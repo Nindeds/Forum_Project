@@ -25,9 +25,6 @@ header {
 .space {
     width: 4rem;
 }
-.space2{
-    width: 21rem;
-}
 
 .nav-padding {
     display: flex;
@@ -53,6 +50,8 @@ li {
     transition: background-color 0.3s ease;
 }
 
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -69,56 +68,58 @@ li {
     opacity: 1;
 }
 
-#Button-Log-Main{
-    width: 8rem;
-    height: 2rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    background-color: #babdbf;
-}
-
-#Button-Log-Main:hover{
- background-color: rgb(186, 177, 177);
-    cursor: pointer;
-}
-
-#post-league{
-    width: 20rem !important;
-}
-
 .main {
-    display: inline-block;
+    display: block;
     position: relative;
-    max-width: 60rem;
-    width: 55rem;
+    max-width: 47.05rem;
+    margin: 0 auto;
     padding: 2rem;
     background-color: rgb(255, 255, 255);
     border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem;
-    vertical-align: top; 
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.2rem rgb(0, 0, 0);
     margin-top: 10rem;
 }
-
-.secondary-main {
-    display: inline-block;
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    width: 25rem;
-    height: 500rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem;
-    margin: 2rem 2rem 2rem 5rem;
-    vertical-align: top; 
-    margin-top: 10rem;
-}
-
 .welcome-section, .latest-discussions, .forum-categories, .login-register {
     margin-bottom: 2rem;
 }
 
 h1, h2 {
     color: rgb(21, 58, 87);
+}
+
+.create-discussion {
+    margin-top: 50px;
+}
+
+.create-discussion form {
+    display: flex;
+    flex-direction: column;
+    max-width: 35.2941rem;
+    margin: 0 auto;
+}
+
+.create-discussion input[type="text"],
+.create-discussion textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-discussion button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-discussion button:hover {
+    background-color: #0056b3;
 }
 
 .main-menu {
@@ -133,6 +134,7 @@ h1, h2 {
 .main-menu li a {
     text-decoration: none;
 }
+
 
 .sub-menu {
     display: none;
@@ -150,40 +152,6 @@ h1, h2 {
 .main-menu li:hover .sub-menu {
     display: block;
 }
-
-.search-container {
-    display: flex;
-    align-items: center;
-}
-
-#search-bar {
-    padding: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    width: 25rem;
-}
-
-#Search-Button {
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
-    margin-left: 0.6rem;
-    border: none;
-    background-color: #bbbec1;
-    color: white;
-    border-radius: 2rem;
-    cursor: pointer;
-}
-
-#Search-Button:hover {
-    background-color: #0056b3;
-}
-
-#results {
-    margin-top: 3rem;
-    width: 100%;
-    text-align: center;
-}
-
 
 @keyframes move {
     100% {

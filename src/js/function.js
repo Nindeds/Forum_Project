@@ -46,3 +46,8 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     event.preventDefault();
   }
 });
+
+function search() {
+  const query = document.getElementById("search-bar").value;
+  document.getElementById("results").innerHTML = `Résultats pour : ${query}`;
+}

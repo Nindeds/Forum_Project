@@ -144,29 +144,6 @@ input {
     color: blue;
 }
 
-.InputField + span {
-    position: absolute;
-}
-
-.InputField + span::before {
-    position: absolute;
-    right: -1.25rem;
-    bottom: -1.6875rem;
-}
-
-.InputField:invalid {
-    border: 0.125rem solid red;
-}
-
-.InputField:invalid + span::before {
-    content: "✖";
-    color: red;
-}
-
-.InputField:valid + span::before {
-    content: "✓";
-    color: green;
-}
 
 @keyframes move {
     100% {
