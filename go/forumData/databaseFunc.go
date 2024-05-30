@@ -15,17 +15,14 @@ func InsertData(dataType string, forumData ...string) error {
 	}
 	switch dataType {
 	case "userData":
-		if _, err = db.Exec("INSERT INTO users (username, mail, password, profile_picture, role) VALUES (?, ?, ?, ?, ?)", forumData[0], forumData[1], forumData[2], "Logo.png", "user"); err != nil {
+		if _, err = db.Exec("INSERT INTO users (username, email, password, profile_picture, role) VALUES (?, ?, ?, ?, ?)", forumData[0], forumData[1], forumData[2], "Logo.png", "user"); err != nil {
 			return err
 		}
 	case "postData":
 		if _, err = db.Exec("INSERT INTO posts (uid, content, like, dislike) VALUES (?, ?, ?, ?)", forumData[0], forumData[1], forumData[2], forumData[4]); err != nil {
 			return err
 		}
-	case "commentData":
-
 	}
-
 	return nil
 }
 
