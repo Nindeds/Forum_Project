@@ -5,8 +5,8 @@ import (
 	"net/http"
 )
 
-func RegisterHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("./src/html/Register.html")
+func LoginHandler(w http.ResponseWriter, r *http.Request) {
+	tmpl, err := template.ParseFiles("./src/html/Login.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -19,8 +19,8 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func LoginHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("./src/html/Login.html")
+func IndexHandler(w http.ResponseWriter, r *http.Request) {
+	tmpl, err := template.ParseFiles("./src/html/main.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
