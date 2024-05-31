@@ -127,125 +127,60 @@ h1, h2 {
 .main-menu li:hover .sub-menu {
     display: block;
 }
-
-#forum {
-    margin-top: 2rem;
-}
-
-.custom-button {
-    padding: 1rem 2rem;
-    background-color: #ff5733;
-    color: #fff;
-    border: none;
+.admin-panel {
+    background-color: #ffffff;
+    padding: 2rem;
     border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1.2rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.2rem rgb(156, 109, 109);
+    margin-top: 1rem;
 }
 
-.custom-button:hover {
-    background-color: #c13d2f;
+.admin-panel h2 {
+    color: rgb(21, 58, 87);
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+.admin-table {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
+    border-collapse: collapse;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 1rem;
+.admin-table th, .admin-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.admin-table th {
+    background-color: #f2f2f2;
+    color: #333;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
+.admin-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.update-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
     text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.2rem 0;
     cursor: pointer;
-}
-
-#post-form input[type="text"],
-#post-form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin: 0.5rem 0;
     border-radius: 0.5rem;
-    border: 1px solid #ccc;
-}
-
-#submit-post-button {
-    padding: 0.5rem 2rem;
-    background-color: #1185ac;
-    color: #fff;
     border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-#submit-post-button:hover {
-    background-color: #0e6d91;
+.update-btn:hover {
+    background-color: #45a049;
 }
 
-#posts h3 {
-    color: #fff;
-    margin-bottom: 1rem;
-}
 
-#post-list {
-    list-style: none;
-    padding: 0;
-}
-
-#post-list li {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.1);
-}
-
-.post-summary {
-    cursor: pointer;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    margin-bottom: 1rem;
-    border-radius: 0.5rem;
-    background-color: #fff;
-}
-
-.post-summary:hover {
-    background-color: #f9f9f9;
-}
-
-.post-title {
-    font-weight: bold;
-}
-
-.post-content {
-    margin-top: 0.5rem;
-}
 
 @keyframes move {
     100% {

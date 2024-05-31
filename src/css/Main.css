@@ -82,35 +82,95 @@ li {
     cursor: pointer;
 }
 
-#post-league{
-    width: 20rem !important;
+.slider-top{
+    width: 20rem;
+    margin-top: 10rem;
+    height: auto;
+}
+.slider-2{
+    display: flex;
+    animation: slider-top 10s infinite linear;
+}
+
+.slider-top img{
+    flex-shrink: 0;
+    width: 100% !important;
+}
+
+@keyframes slider-top{
+    from {
+        transform: translateX(0);
+    }to{
+        transform: translateX(-1200%);
+    }
+}
+
+.slider-News{
+    max-width: 20rem;
+    overflow: hidden;
+}
+
+.slider-News .slider{
+    display: flex;
+    animation: slider-News 15s infinite ease-in-out
+}
+
+.slider-News img{
+    flex-shrink: 0;
+    width: 100% !important;
+    text-align: center;
+}
+
+@keyframes slider-News{
+    0%,
+    20%     {
+        transform:translateX(0);
+    }
+    25%,
+    45% {
+        transform:translateX(-100%);
+    }
+    50%,
+    70%{
+        transform:translateX(-200%);
+    }
+    75%,
+    95%{
+        transform:translateX(-300%);
+    }
+    100%{
+        transform:translateX(-400%);
+    }
 }
 
 .main {
     display: inline-block;
     position: relative;
+    overflow: hidden;
     max-width: 60rem;
     width: 55rem;
+    height: auto;
     padding: 2rem;
     background-color: rgb(255, 255, 255);
     border-radius: 0.5rem;
     box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem;
     vertical-align: top; 
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
-.secondary-main {
+.secondary-main { 
     display: inline-block;
     position: relative;
     background-color: rgb(255, 255, 255);
     width: 25rem;
-    height: 500rem;
+    height: auto;
     padding: 2rem;
+    overflow: hidden;
     border-radius: 0.5rem;
     box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem;
     margin: 2rem 2rem 2rem 5rem;
     vertical-align: top; 
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .welcome-section, .latest-discussions, .forum-categories, .login-register {
