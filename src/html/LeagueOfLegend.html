@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum - Page League of Legend</title>
-    <link rel="stylesheet" href="/src/css/LeagueOfLegend.css">
+    <link rel="stylesheet" href="../css/LeagueOfLegend.css">
 </head>
 <body>
     <header class="fixed-top">
         <div class="container">
             <div class="nav-padding">
-                <a href="/" class="img"><img src="/src/img/Logo.png" alt="Logo"></a>
+                <a href="/" class="img"><img src="../img/Logo.png" alt="Logo"></a>
                 <span class="space"></span>
                 <ul class="main-menu">
                     <li><a href="/" class="nav">Accueil</a></li>
@@ -43,23 +43,38 @@
     </header>
     <div class="main">
         <main>
-            <h2>Welcome to the League of Legends forum</h2>
-            <button id="create-post-button" class="custom-button">Create Post</button>
-            <div id="post-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>Create a New Post</h3>
-                    <form id="post-form" method="post" action="/create-post">
-                        <input type="text" id="post-title" name="title" placeholder="Title" required><br>
-                        <textarea id="post-message" name="message" rows="4" cols="50" placeholder="Write your message here..." required></textarea><br>
-                        <input type="file" id="post-image" name="image"><br>
-                        <button type="submit" id="submit-post-button">Submit</button>
-                    </form>
+            <h2>Welcome in the League of legend forum</h2>
+            <p>Most recent topic :</p>
+            <button id="post-button" class="custom-button btn-post">Post</button>
+            <div id="posts-container">
+                {{range .Post}}
+                <div class="post-preview" onclick="window.location.href='/post/detail?id={{.ID}}'">
+                    <h2>{{.Title}}</h2>
+                    <p>{{.Content}}</p>
                 </div>
+                {{else}}
+                <p>No posts available.</p>
+                {{end}}
             </div>
         </main>
     </div>
-
+    <div class="modal" id="post-modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <form id="post-form" action="/post" method="POST" enctype="multipart/form-data">
+                <label for="title" class="modal-center">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <br>
+                <label for="content" class="modal-center" >Content:</label>
+                <textarea id="content" name="content" rows="4" cols="50" required></textarea>
+                <br>
+                <label for="image" class="modal-center" >Image:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+                <br>
+                <input type="submit" value="Post" class="custom-button">
+            </form>
+        </div>
+    </div>
     <div class="background">
         <span></span>
         <span></span>
@@ -78,5 +93,6 @@
         <span></span>
         <span></span>
      </div>
+    <script src="../js/post.js"></script>
 </body>
 </html>

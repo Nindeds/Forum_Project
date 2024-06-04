@@ -75,6 +75,7 @@ ul {
     border-radius: 0.5rem;
     box-shadow: 0.1rem 0.1rem 0.2rem 0.2rem rgb(0, 0, 0);
     margin-top: 10rem;
+    overflow-wrap: break-word;
 }
 
 .space2{
@@ -147,7 +148,6 @@ h1, h2 {
     background-color: #c13d2f;
 }
 
-/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -242,13 +242,16 @@ h1, h2 {
 #comment-list {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+
 }
 
 #comment-list li {
     background-color: #f9f9f9;
-    padding: 1rem;
+    padding: 0.5rem 18.5rem;
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: -2rem;
     box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.1);
 }
 
@@ -277,7 +280,11 @@ h1, h2 {
 #submit-comment-button:hover {
     background-color: #0e6d91;
 }
-
+#Return-Button{
+    display: flex;
+    background-color: white;
+    margin-top: 1rem;
+}
 
 @keyframes move {
     100% {
