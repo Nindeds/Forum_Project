@@ -14,10 +14,10 @@ type webserver struct {
 
 func main() {
 	server := webserver{
-		core:      http.NewServeMux(),
-		port:      8080,
-		assetsdir: "src",
+		core: http.NewServeMux(),
+		port: 8080,
 	}
+
 	server.Router()
 	server.Launch()
 }
@@ -25,10 +25,13 @@ func main() {
 func (s *webserver) Router() {
 	s.core.HandleFunc("/register", handlers.RegisterHandler)
 	s.core.HandleFunc("/login", handlers.LoginHandler)
+	s.core.HandleFunc("/", handlers.HomeHandler)
+	s.core.HandleFunc("/updateprofile", handlers.UpdateProfileHandler)
+	s.core.HandleFunc("/profile/{username}", handlers.UserProfileHandler)
 	s.core.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./src/css"))))
 	s.core.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("./src/img"))))
 	s.core.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("./src/js"))))
-	fmt.Printf("http://localhost:%d", s.port)
+	fmt.Printf("http://localhost:%d \n", s.port)
 }
 
 func (s *webserver) Launch() {

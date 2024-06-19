@@ -10,7 +10,7 @@
     <header class="fixed-top">
         <div class="container">
             <div class="nav-padding">
-                <a href="/" class="img"><img src="/src/img/Logo.png" alt="Logo"></a>
+                <a href="/" class="img"><img src="./img/Logo.png" alt="Logo"></a>
                 <span class="space"></span>
                 <ul class="main-menu">
                     <li><a href="/" class="nav">Accueil</a></li>
@@ -44,10 +44,10 @@
     <div class="main">
         <main>
             <div class="profile-header">
-                <img id="current-profile-picture" class="profile-picture-header" src="/path/to/current/profile-picture.jpg" alt="Photo de profil actuelle">
+                <img id="current-profile-picture" class="profile-picture-header" src="../img/Logo.png" alt="Photo de profil actuelle">
                 <h1>Profil Utilisateur</h1>
             </div>
-            <form id="user-profile-form" action="/update-profile" method="post" enctype="multipart/form-data">
+            <form enctype="multipart/form-data" id="user-profile-form" method="post">
                 <div>
                     <label for="username">Nom d'utilisateur :</label>
                     <input type="text" id="username" name="username" required>
@@ -63,11 +63,6 @@
                 <div>
                     <label for="confirm-password">Confirmer le mot de passe :</label>
                     <input type="password" id="confirm-password" name="confirm-password" required>
-                </div>
-                <div>
-                    <label for="profile-picture">Photo de profil :</label>
-                    <input type="file" id="profile-picture" name="profile-picture" accept="image/*" required>
-                    <img id="profile-picture-preview" class="profile-picture-preview" src="#" alt="Prévisualisation de la photo de profil" style="display:none;">
                 </div>
                 <div>
                     <input type="submit" value="Mettre à jour">
@@ -91,23 +86,6 @@
         <span></span>
         <span></span>
      </div>
-     <script>
-         document.getElementById('profile-picture').onchange = function (event) {
-             var reader = new FileReader();
-             reader.onload = function () {
-                 var output = document.getElementById('profile-picture-preview');
-                 output.src = reader.result;
-                 output.style.display = 'block';
-             }
-             reader.readAsDataURL(event.target.files[0]);
-         };
-
-         window.onload = function() {
-             var profilePic = document.getElementById('current-profile-picture');
-             if (!profilePic.src || profilePic.src.endsWith('/path/to/current/profile-picture.jpg')) {
-                 profilePic.src = '/path/to/default-profile-picture.jpg'; // Path to default image
-             }
-         };
-     </script>
 </body>
+<script src="../js/function.js"></script>
 </html>
