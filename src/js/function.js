@@ -1,7 +1,7 @@
-var Password = document.getElementById("UserPasswordInput");
-var Confirm_Password = document.getElementById("Confirm-PasswordInput");
-var Email = document.getElementById("UserMailInput");
-var Username = document.getElementById("UserInput");
+var Password = document.getElementById("password");
+var Confirm_Password = document.getElementById("confirm-password");
+var Email = document.getElementById("email");
+var Username = document.getElementById("username");
 
 // Verify if Password is the same as Confirm Password
 function PasswordIsEqual() {

@@ -8,6 +8,7 @@ import (
 	"net/http"
 )
 
+// UpdateProfileHandler is used to handle the updateProfile page
 func UpdateProfileHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles("./src/html/updateProfile.html")
 	if err != nil {
@@ -19,11 +20,6 @@ func UpdateProfileHandler(w http.ResponseWriter, r *http.Request) {
 	newUsername := r.FormValue("username")
 	newEmail := r.FormValue("email")
 	newPassword := r.FormValue("password")
-
-	if err != nil {
-		fmt.Println("Error Retrieving the File")
-		fmt.Println(err)
-	}
 
 	hashedPass, _ := bcrypt.GenerateFromPassword([]byte(newPassword), 10)
 	if err != nil {

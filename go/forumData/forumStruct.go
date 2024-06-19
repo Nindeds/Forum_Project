@@ -17,8 +17,8 @@ type User struct {
 type Post struct {
 	ID      int
 	UID     int
+	Title   string
 	Text    string
-	Image   string
 	Like    int
 	Dislike int
 }
@@ -31,6 +31,14 @@ type Comment struct {
 	Image   string
 	Like    int
 	Dislike int
+}
+
+type ShowPost struct {
+	Username string
+	Title    string
+	Text     string
+	Like     int
+	Dislike  int
 }
 
 type UserSession struct {

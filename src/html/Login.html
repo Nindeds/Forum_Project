@@ -10,7 +10,7 @@
         <div class="Header width-full" role="banner">
             <div class="container-Header width-full text-center">
                 <a role="logo" class="header-logo" href="/login">
-                    <img src="../img/Logo.png" alt="Logo">
+                    <img src="../../img/Logo.png" alt="Logo">
                 </a>
             </div>
         </div>
@@ -19,9 +19,13 @@
                 <div class="authentification-form px-3 visual" id="login">
                     <div class="authentification-form-header p-0">
                         <h1>Sign in <b><br>Game-Forum</b></h1>
+                        <center>{{ if .WrongCredentials}}
+                            You entered the wrong username/email or password
+                            {{ else }}
+                            {{ end }}</center>
                     </div>
                     <div class="authentification-form-body">
-                        <form action="Main.html" method="POST">
+                        <form method="POST">
                             <label for="User"><b>Username or Address email</b></label>
                             <input type="text" name="User" id="UserInput" required minlength="4" maxlength="14" size="35">
                             <div class="position-relative">
@@ -30,8 +34,7 @@
                                 <input type="submit" name="submit" value="Login" class="ButtonLogin">
                                 <a href="/password_forget" id="forget-password">Forgot password?</a>
                                 <a href="/register" id="Login-Register">Create new account</a>
-                            </div>+
-
+                            </div>
                         </form>
                     </div>
                 </div>

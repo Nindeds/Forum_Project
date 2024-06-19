@@ -8,6 +8,7 @@ import (
 	"net/http"
 )
 
+// RegisterHandler is used to handle the register page
 func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles("./src/html/Register.html")
 	if err != nil {
@@ -20,15 +21,15 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	password := r.FormValue("UserPassword")
 
 	isEmpty := isDataEmpty(username, email, password)
+	IsDataUsed := isDataUsed(email, username)
 
-	hashedPass, _ := bcrypt.GenerateFromPassword([]byte(password), 10)
+	hashedPass, err := bcrypt.GenerateFromPassword([]byte(password), 10)
 	if err != nil {
 		fmt.Println(err)
 	}
-	IsDataUsed := isDataUsed(username, email)
 
 	if isEmpty == false && IsDataUsed == false {
-		err = forumData.InsertData("users", username, email, string(hashedPass))
+		err = forumData.InsertData("userData", username, email, string(hashedPass))
 		if err != nil {
 			fmt.Println(err)
 		}
@@ -42,9 +43,10 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func isDataUsed(data ...string) bool {
-	emails, err := forumData.GetData("email")
-	usernames, err := forumData.GetData("username")
+// isDataUsed is used to verify if the inserted data is already used by another user
+func isDataUsed(emailInput string, usernameInput string) bool {
+	emails, err := forumData.GetSpecificUserData("email")
+	usernames, err := forumData.GetSpecificUserData("username")
 
 	MailAlreadyUsed := false
 	UsernameAlreadyUsed := false
@@ -55,13 +57,13 @@ func isDataUsed(data ...string) bool {
 	}
 
 	for _, email := range emails {
-		if email == data[0] {
+		if email == emailInput {
 			MailAlreadyUsed = true
 		}
 	}
 
 	for _, username := range usernames {
-		if username == data[1] {
+		if username == usernameInput {
 			UsernameAlreadyUsed = true
 		}
 	}
@@ -74,11 +76,10 @@ func isDataUsed(data ...string) bool {
 	return IsDataUsed
 }
 
-func isDataEmpty(data ...string) bool {
-	for _, dataString := range data {
-		if dataString == "" {
-			return true
-		}
+// isDataEmpty Check if the inserted data is empty
+func isDataEmpty(username string, email string, password string) bool {
+	if username == "" || email == "" || password == "" {
+		return true
 	}
 	return false
 }

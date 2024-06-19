@@ -10,13 +10,13 @@
 <header class="fixed-top">
     <div class="container">
         <div class="nav-padding">
-            <a href="/" class="img"><img src="../img/Logo.png" alt="Logo"></a>
+            <a href="/" class="img"><img src="../../img/Logo.png" alt="Logo"></a>
             <span class="space"></span>
             <ul class="main-menu">
                 <li><a href="/" class="nav">Accueil</a></li>
                 <li><a href="#" class="nav">Forum ▼</a>
                     <ul class="sub-menu">
-                        <li><a href="/">League of Legend</a></li>
+                        <li><a href="/leagueoflegends">League of Legend</a></li>
                         <li><a href="#">Overwatch 2</a></li>
                         <li><a href="#">Valorant</a></li>
                         <li><a href="#">World of Warcraft</a></li>
@@ -44,35 +44,23 @@
 <div class="main">
     <main>
         <form id="Return-Button" action="http://localhost:8080/post/">
-            <input type="submit" value="x" />
+            <input type="submit" value="x"/>
         </form>
-        <h2>{{.Post.Title}}</h2>
+        <h2>{{.Title}}</h2>
         ---------------------------------------------------------------------------------------------------------------------
-        <div>{{.Post.Content}}</div>
+        <div>{{.Text}}</div>
         ---------------------------------------------------------------------------------------------------------------------
-        <div>{{.Post.Date}}</div>
-        {{if .Post.ImageURL}}
-        <div>
-            <img src="{{.Post.ImageURL}}" alt="Post Image" />
-        </div>
-        {{end}}
+        <div>{{.Username}}</div>
         <h3>Comments</h3>
         <form id="comment-form" method="post" action="/post/comment">
             <label for="comment-message">Your Message:</label>
             <textarea id="comment-message" name="message" rows="2" cols="50" placeholder="Write your comment here..." required></textarea><br>
-            <input type="hidden" name="post_id" value="{{.Post.ID}}">
+            <input type="hidden" name="post_id" value="">
             <button type="submit" id="submit-comment-button">Comment</button>
         </form>
         <div id="comments-section">
             <ul id="comment-list">
-                {{range .Post.Comments}}
-                <li>
-                    <div><strong>{{.User}}</strong></div> - <div>{{.Date}}</div>
-                    <div>{{.Message}}</div>
-                </li>
-                {{else}}
                 <li>No comments yet.</li>
-                {{end}}
             </ul>
         </div>
     </main>
